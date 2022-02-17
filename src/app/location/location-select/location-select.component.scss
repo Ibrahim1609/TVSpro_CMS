@@ -1,0 +1,39 @@
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+select {
+    width: 154px;
+    height: 32px;
+    border: 1px solid #c6c6c6;
+    border-radius: 4px;
+    color: #2a2a2a;
+    text-align: left;
+    padding: 3px 8px;
+    font-family: 'Poppins';
+    font-size: 12px;
+    margin: 3px 10px;
+}
+
+input {
+    width: 280px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid #C6C6C6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    padding: 1px 8px;
+    padding-left: 2.5em;
+    margin: 3px 10px;
+}
+
+.searchIcon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    color: #2A2A2A;
+    padding: 12px 18px;
+    font-size: 16px;
+}

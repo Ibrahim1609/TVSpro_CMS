@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="header" *ngFor="let item of Items">
+        <div>
+            <img class="imageLogo" src="{{item.image}}" alt="logo">
+        </div>
+        <h2 class="title">{{item.title}}</h2>
+        <div class="spanParent">
+            <span class="span">
+                Enter 4 Digit OTP sent to your email id <a routerLink="/">Change Email ID</a>
+            </span>
+        </div>
+    </div>
+    <div id="form" *ngFor="let item of Items">
+        <form [formGroup]='loginForm'>
+            <label for="Email/Phone">{{item.lable1}} </label>
+            <input id="mail" type="password" formControlName="OTP" placeholder="Enter Received OTP" [maxLength]="4"
+                [minlength]="4">
+
+            <label class="labelLink" for="Password">
+                {{item.lable2}}
+                <a routerLink="">{{item.labelLink}}</a>
+            </label>
+
+            <button type="submit" class="btn" [disabled]="!loginForm.valid">Verify</button>
+
+        </form>
+    </div>
+</div>

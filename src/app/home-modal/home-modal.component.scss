@@ -1,0 +1,13 @@
+.modalSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.modal-dialog {
+    position: relative;
+    width: 370px;
+    margin: 0.5rem;
+    pointer-events: none;
+    float: right;
+}

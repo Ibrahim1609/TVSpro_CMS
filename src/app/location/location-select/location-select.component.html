@@ -1,0 +1,6 @@
+<div class="container-fluid">
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Select Service</option>
+        <option *ngFor="let service of serviceList" [value]="service">{{service.name}}</option>
+    </select>
+</div>

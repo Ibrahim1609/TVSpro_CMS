@@ -1,0 +1,17 @@
+mat-card-subtitle {
+    display: flex;
+    flex-direction: row;
+    color: #606060;
+    font-size: 12px;
+}
+
+mat-card {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+}
+
+mat-card-title {
+    font-size: 24px;
+    font-weight: 600;
+}

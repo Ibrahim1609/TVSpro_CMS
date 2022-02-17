@@ -1,0 +1,96 @@
+.modalSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-dialog {
+    position: relative;
+    width: 370px;
+    margin: 0.5rem;
+    pointer-events: none;
+    float: right;
+}
+
+.form-control {
+    width: 296px;
+    height: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #2A2A2A;
+    border: 1px solid #C6C6C6;
+    border-radius: 4px;
+}
+
+.form-file {
+    width: 296px;
+    height: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #2A2A2A;
+    border-radius: 4px;
+}
+
+h5 {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin: 0px 34px;
+}
+
+span {
+    font-size: 12px;
+    color: #606060;
+}
+
+.modal-body div {
+    padding: 10px 1px;
+}
+
+label {
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.link {
+    color: #0075BE;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.btn {
+    background-color: #0075BE;
+    color: white;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    width: 296px;
+    height: 32px;
+}
+
+.example-container {
+    width: 400px;
+    height: 200px;
+    margin: 12px;
+    border: 1px solid #555;
+}
+
+mat-drawer-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

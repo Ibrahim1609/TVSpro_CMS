@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="labelInput">
+        <mat-label>
+            <mat-icon class="searchIcon">search</mat-icon>
+            <input id="search" type="name" aria-label="Name" (keyup)="applyFilter($event)" placeholder="Search by order id">
+        </mat-label>
+    </div>
+
+    <mat-table [dataSource]="dataSource" cdkDropList cdkDropListOrientation="horizontal" (cdkDropListDropped)="drop($event)">
+
+        <ng-container matColumnDef="position">
+            <th mat-header-cell cdkDrag *matHeaderCellDef> Order ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell cdkDrag *matHeaderCellDef> Service Request No </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="devices">
+            <th mat-header-cell cdkDrag *matHeaderCellDef> Device </th>
+            <td mat-cell *matCellDef="let element"> {{element.devices}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="type">
+            <th mat-header-cell cdkDrag *matHeaderCellDef> Type </th>
+            <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+            <th mat-header-cell cdkDrag *matHeaderCellDef> Order Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+            <th mat-header-cell cdkDrag *matHeaderCellDef>Status </th>
+            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+        <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+    </mat-table>
+</div>

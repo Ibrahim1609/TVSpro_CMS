@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+.example-container {
+    width: 100%;
+    height: auto;
+}
+
+.example-sidenav-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.example-sidenav {
+    cursor: pointer;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.example-spacer .title {
+    margin-left: 2.5em;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.imgLogo {
+    width: 64px;
+    height: 40px;
+}
+
+.navLeft {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    justify-content: space-between;
+}
+
+.notifyBell {
+    color: #0075BE;
+    position: absolute;
+    left: 0px;
+    width: 25px;
+}
+
+.setup {
+    width: 30px;
+    position: absolute;
+    top: 9px;
+}
+
+.section {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+.toolBar {
+    background: #ffffff;
+    color: rgba(0, 0, 0, .87);
+    border: 0.5px solid #d1d1d133;
+    box-shadow: 0px 2px 4px #00000010;
+}
+
+.navigateButton {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    flex-direction: column;
+    margin: 9px 0px;
+    width: 224px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.navigateButton:hover {
+    background: aliceblue;
+    border-left: 3px solid #0075BE;
+    color: #0075BE;
+    font-weight: 600;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.iconImage {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+}

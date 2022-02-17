@@ -1,0 +1,13 @@
+<div class="container">
+
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Status</option>
+        <option *ngFor="let status of statusList" [value]="status">{{status.status}}</option>
+    </select>
+
+    <select class="form-select" aria-label="Default select example">
+        <option>Validity</option>
+        <option *ngFor="let valid of validityList" [value]="valid">{{valid.validity}}</option>
+    </select>
+
+</div>

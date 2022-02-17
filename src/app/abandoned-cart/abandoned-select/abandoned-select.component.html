@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Cart Items</option>
+        <option *ngFor="let cart of cartList" [value]="cart">{{cart.value}}</option>
+    </select>
+
+    <select class="form-select" aria-label="Default select example">
+        <option>Periods</option>
+        <option *ngFor="let period of PeriodList" [value]="period">{{period.duration}}</option>
+    </select>
+
+</div>

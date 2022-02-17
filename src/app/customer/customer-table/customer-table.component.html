@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="labelInput">
+        <mat-label>
+            <mat-icon class="searchIcon">search</mat-icon>
+            <input id="search" type="name" aria-label="Name" (keyup)="applyFilter($event)" placeholder="Search by  customer id, mobile no">
+        </mat-label>
+    </div>
+
+    <mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort (matSortChange)="announceSortChange($event)">
+
+        <!-- Checkbox Column -->
+        <ng-container matColumnDef="select">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
+                </mat-checkbox>
+            </th>
+            <td mat-cell *matCellDef="let row">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
+                </mat-checkbox>
+            </td>
+        </ng-container>
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by ID"> ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name"> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="mobile">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by mobile"> Mobile No
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.mobile}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="Date">
+            <th mat-header-cell *matHeaderCellDef> Last Order Date </th>
+            <td mat-cell *matCellDef="let element"> {{element.Date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="devices">
+            <th mat-header-cell *matHeaderCellDef> Devices </th>
+            <td mat-cell *matCellDef="let element"> {{element.devices}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="EW">
+            <th mat-header-cell *matHeaderCellDef> EW </th>
+            <td mat-cell *matCellDef="let element"> {{element.EW}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="AMC">
+            <th mat-header-cell *matHeaderCellDef> AMC </th>
+            <td mat-cell *matCellDef="let element"> {{element.AMC}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Service">
+            <th mat-header-cell *matHeaderCellDef>Service Request </th>
+            <td mat-cell *matCellDef="let element"> {{element.Service}} </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="rowDetail()" (click)="selection.toggle(row)">
+        </tr>
+    </mat-table>
+</div>

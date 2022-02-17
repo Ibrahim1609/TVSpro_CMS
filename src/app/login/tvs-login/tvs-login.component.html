@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="header" *ngFor="let item of Items">
+        <div>
+            <img class="imageLogo" src="{{item.image}}" alt="logo">
+        </div>
+        <h2 class="title">{{item.title}}</h2>
+        <div class="spanParent">
+            <span class="span">
+                Enter <a routerLink="/">Email</a> or <a routerLink="/">Mobile Number</a> to continue
+            </span>
+        </div>
+    </div>
+    <div id="form" *ngFor="let item of Items">
+        <form [formGroup]='loginForm' (ngSubmit)="onSubmit()">
+            <label for="Email/Phone">{{item.lable1}} </label>
+            <span><img class="userLogin" src="/assets/loginUser.png" alt="user-demo"></span>
+            <input id="mail" type="email" formControlName="mailId" placeholder="Enter Email or Mobile Number" [maxlength]="30" [minlength]="3">
+
+            <label class="labelLink" for="Password">
+                {{item.lable2}}
+                <a routerLink="/forgotpwd">{{item.labelLink}}</a>
+            </label>
+            <div class="input-group">
+                <span class="input-group-text" (click)="onClick()">
+                    <img class="viewHide" src="/assets/view-hide.png" *ngIf="!show" alt="user-demo">
+                    <img class="viewHide" src="/assets/hide-view.png" *ngIf="show" alt="user-demo">
+                </span>
+            </div>
+            <span><img class="userLogin" src="/assets/password.png" alt="user-demo"></span>
+            <input id="password" [type]="password" formControlName="password" aria-label="Amount (to the nearest dollar)" placeholder="Enter Password" [maxlength]="25">
+
+            <button type="submit" class="btn" (click)="onSubmit()" [disabled]="!loginForm.valid">Continue</button>
+
+            <button type="submit" class=" btn btn-outline" (click)="request()" [hidden]="!loginForm.valid">Request
+                OTP</button>
+        </form>
+    </div>
+</div>

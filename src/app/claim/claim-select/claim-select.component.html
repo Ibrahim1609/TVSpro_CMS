@@ -1,0 +1,21 @@
+<div class="container-fluid">
+
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Devices</option>
+        <option *ngFor="let device of deviceList" [value]="device">{{device.devices}}</option>
+    </select>
+
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Brand</option>
+        <option *ngFor="let brand of brandList" [value]="brand">{{brand.brand}}</option>
+    </select>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Status</option>
+        <option *ngFor="let status of statusList" [value]="status">{{status.status}}</option>
+    </select>
+
+    <form>
+        <input type="datetime-local" class="dateLocal" id="birthdaytime" name="birthdaytime">
+    </form>
+
+</div>

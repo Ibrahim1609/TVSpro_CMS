@@ -1,0 +1,61 @@
+<mat-toolbar class="toolBar">
+    <div class="navLeft">
+        <button mat-icon-button class="example-icon" mat-button (click)="drawer.toggle()" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+        <span><img class="imgLogo" src="../assets/Logo.png" alt="logo"></span>
+    </div>
+
+    <span class="example-spacer">
+    <span class="title"> {{title}}</span>
+    </span>
+
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon matBadge="11" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()" matBadgeColor="warn"
+      class="alertNotify"><img class="notifyBell" src="../assets//Bell.png" alt="bell"></mat-icon>
+    <span class="cdk-visually-hidden">
+      Example with a home icon with overlaid badge showing the number 11
+    </span>
+  </button>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <span>
+      <img class="rounded-circle" alt="" src="" data-holder-rendered="true"></span>
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
+
+    <mat-menu #menu="matMenu" class="menuCollection">
+        <button mat-menu-item>
+      <mat-icon><img src="../assets/home.png" class="setup" alt=""></mat-icon>
+      <span class="section">Home Section</span>
+    </button>
+        <button mat-menu-item>
+      <mat-icon><img src="../assets/user.png" class="setup" alt=""></mat-icon>
+      <span class="section">User Role</span>
+    </button>
+        <button mat-menu-item class="btn btn-primary">
+      <mat-icon><img src="../assets/setup.png" class="setup" alt=""></mat-icon>
+      <span class="section">Setup</span>
+    </button>
+        <button mat-menu-item>
+      <mat-icon><img src="../assets/logout.png" class="setup" alt=""></mat-icon>
+      <span class="section" (click)="logOut()">Logout</span>
+    </button>
+    </mat-menu>
+
+</mat-toolbar>
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <div *ngFor="let item of Menu; let i=index">
+            <button class="navigateButton" mat-raised-button routerLinkActive="active-link" (click)="navigatePage(item.url)">
+        <img src="{{item.imageSrc}}" alt="" class="iconImage"> {{item?.name}}
+      </button>
+        </div>
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</mat-drawer-container>

@@ -3,7 +3,7 @@
         <button mat-icon-button class="example-icon" mat-button (click)="drawer.toggle()" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
-        <span><img class="imgLogo" src="../assets/Logo.png" alt="logo"></span>
+        <span><img class="imgLogo" src="assets/Logo.png" alt="logo"></span>
     </div>
 
     <span class="example-spacer">
@@ -12,7 +12,7 @@
 
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     <mat-icon matBadge="11" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()" matBadgeColor="warn"
-      class="alertNotify"><img class="notifyBell" src="../assets//Bell.png" alt="bell"></mat-icon>
+      class="alertNotify"><img class="notifyBell" src="assets//Bell.png" alt="bell"></mat-icon>
     <span class="cdk-visually-hidden">
       Example with a home icon with overlaid badge showing the number 11
     </span>
@@ -26,19 +26,19 @@
 
     <mat-menu #menu="matMenu" class="menuCollection">
         <button mat-menu-item>
-      <mat-icon><img src="../assets/home.png" class="setup" alt=""></mat-icon>
+      <mat-icon><img src="assets/home.png" class="setup" alt=""></mat-icon>
       <span class="section">Home Section</span>
     </button>
         <button mat-menu-item>
-      <mat-icon><img src="../assets/user.png" class="setup" alt=""></mat-icon>
+      <mat-icon><img src="assets/user.png" class="setup" alt=""></mat-icon>
       <span class="section">User Role</span>
     </button>
         <button mat-menu-item class="btn btn-primary">
-      <mat-icon><img src="../assets/setup.png" class="setup" alt=""></mat-icon>
+      <mat-icon><img src="assets/setup.png" class="setup" alt=""></mat-icon>
       <span class="section">Setup</span>
     </button>
         <button mat-menu-item>
-      <mat-icon><img src="../assets/logout.png" class="setup" alt=""></mat-icon>
+      <mat-icon><img src="assets/logout.png" class="setup" alt=""></mat-icon>
       <span class="section" (click)="logOut()">Logout</span>
     </button>
     </mat-menu>
